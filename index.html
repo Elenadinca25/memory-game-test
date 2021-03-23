@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<title>Memory Game</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css"></link>
+    <script src="src/index.js"></script>
+    <script src= "https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+  </head>
+  <body class="container">
+    <div class="box-area"> 
+      <div class="animation-area">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+    <div class="banner-text">
+      <h2>Welcome to Memory Game</h2>
+    </div>
+
+    <div class="details">
+      <h3>Score: <span id="result"></span></h3>
+      <div class="grid"></div>
+      <button onclick="togglePopup()">Instructions</button> 
+      </div>
+      <!-- div containing the popup -->
+      <div class="content"> 
+          <div onclick="togglePopup()" class="close-btn"> × </div> 
+          <h3>Instructions</h3> 
+         <strong>The objective is to collect the most pairs of cards.</strong>
+            <p>A Match: A player makes a match if the two cards turned picture-side-up are identical.</p>
+            <p>A Miss: A player misses if the two cards turned over are not identical.</p>
+            <p>The game continues until all cards have been matched and removed from the playing area.</p>
+      </div>
+    </div>
+  </div>
+
+    <script type="text/javascript"> 
+      // Function to show and hide the popup 
+      function togglePopup() { 
+          $(".content").toggle(); 
+      } 
+    </script> 
+  </body>
+</html>
